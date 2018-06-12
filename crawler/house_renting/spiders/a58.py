@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
-from scrapy import Selector
 from scrapy.linkextractors import LinkExtractor
 from scrapy.loader import ItemLoader
 from scrapy.spiders import Rule
 
-from house_renting.base_spider import BaseCrawlSpider
-from house_renting.items import HouseRenting58Item
+from ..base_spider import BaseCrawlSpider
+from ..items import HouseRenting58Item
 
 
 class A58Spider(BaseCrawlSpider):

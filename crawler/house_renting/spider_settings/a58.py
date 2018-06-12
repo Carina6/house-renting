@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # 只需要在这个列表中添加以下 available_cities 中的城市, 如果只需要扒取一个城市也需要使用一个括号包围, 如 (u'广州',)
-cities = (u'北京', u'广州',)
+cities = (u'上海',)
 
 # 以下注释的字母表示的是省份名字的拼音首字母
 available_cities = (
@@ -1354,6 +1354,8 @@ available_cities_map = {
     u'宣汉': 'http://xuanhan.58.com/chuzu/',
     u'渠县': 'http://qux.58.com/chuzu/',
     u'长宁': 'http://changningx.58.com/chuzu/',
+
+    u'上海': 'http://sh.58.com/chuzu/',
     # X
 
     u'乌鲁木齐': 'http://xj.58.com/chuzu/',

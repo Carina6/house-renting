@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # 只需要在这个列表中添加以下 available_cities 中的城市, 如果只需要扒取一个城市也需要使用一个括号包围, 如 (u'广州',)
-cities = (u'广州', u'北京')
+cities = (u'上海',)
 
 available_cities = (
     u'北京',

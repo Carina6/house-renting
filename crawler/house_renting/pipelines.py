@@ -10,7 +10,7 @@ import redis
 from scrapy.conf import settings
 from scrapy.exceptions import DropItem
 
-from house_renting.exporters import ESItemExporter
+from .exporters import ESItemExporter
 
 
 class HouseRentingPipeline(object):

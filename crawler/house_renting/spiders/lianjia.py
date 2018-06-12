@@ -5,8 +5,8 @@ from scrapy.linkextractors import LinkExtractor
 from scrapy.loader import ItemLoader
 from scrapy.spiders import Rule
 
-from house_renting.base_spider import BaseCrawlSpider
-from house_renting.items import HouseRentingLianjiaItem
+from ..base_spider import BaseCrawlSpider
+from ..items import HouseRentingLianjiaItem
 
 current_page = 0
 

@@ -10,7 +10,7 @@ from redis import Redis
 from scrapy.conf import settings
 from scrapy.downloadermiddlewares.retry import RetryMiddleware
 
-from house_renting import proxies
+from . import proxies
 
 
 class HouseRentingAgentMiddleware(object):

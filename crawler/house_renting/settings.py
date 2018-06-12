@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from house_renting.spider_settings import lianjia, a58
+from .spider_settings import lianjia, a58
 
 BOT_NAME = 'house_renting'
 
@@ -126,8 +126,8 @@ SPIDER_SETTINGS = {
 
 # ES 节点, 可以配置多个节点(集群), 默认为 None, 不会存储到 ES
 ELASTIC_HOSTS = [
-    {'host': 'elastic', 'port': 9200},
+    {'host': '10.239.10.9', 'port': 9200},
 ]
 
-REDIS_HOST = 'redis'  # 默认为 None, 不会去重
+REDIS_HOST = 'localhost'  # 默认为 None, 不会去重
 REDIS_PORT = 6379  # 默认 6379

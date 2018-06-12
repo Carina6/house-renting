@@ -1,20 +1,27 @@
 # -*- coding: utf-8 -*-
+from urllib import parse
 
 from scrapy import Selector
 from scrapy.linkextractors import LinkExtractor
 from scrapy.loader import ItemLoader
 from scrapy.spiders import Rule, CrawlSpider
 
-from house_renting.items import HouseRentingDoubanItem
+from ..items import HouseRentingDoubanItem
 
 
 class DoubanSpider(CrawlSpider):
     name = 'douban'
     allowed_domains = ['douban.com']
-    start_urls = ['https://www.douban.com/group/tianhezufang/discussion?start=0']
+    url = 'https://www.douban.com/group/search?start=0&cat=1013&sort=time&'
+    url_params = {
+        'q': '金运路'
+    }
+    url_encode = parse.urlencode(url_params)
+
+    start_urls = [url + url_encode]
 
     rules = (
-        Rule(LinkExtractor(allow=r'/group/tianhezufang/discussion\?start=\d+$',
+        Rule(LinkExtractor(allow=r'/group/search?start=\d+&cat=1013&sort=time&' + url_encode,
                            restrict_css=('div#content div.article table', 'div#content div.article div.paginator')),
              follow=True),
         Rule(LinkExtractor(allow=r'/group/topic/\d+/$'), callback='parse_item'),
